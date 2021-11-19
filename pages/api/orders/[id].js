@@ -14,6 +14,7 @@ handler.get(async (req, res) => {
   try {
     const orders = await Order.find({ user: id });
     if (orders) {
+       res.setHeader('Access-Control-Allow-Origin', '*');
       res.status(200).json({
         success: true,
         orders,

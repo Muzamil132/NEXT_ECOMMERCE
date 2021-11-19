@@ -31,7 +31,7 @@ handler.post(async (req, res) => {
         //     maxAge: 60 * 60 * 24 * 7, // 1 week
         //   })
         // );
-
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).json({
           success: true,
           user,
