@@ -29,7 +29,7 @@ const Shipping = () => {
   }, [USER]);
 
   const nextStep = () => {
-    if (Object.values(shippingAdress).includes("")) {
+    if (Object.values(shippingAdress).every((x) => x === null || x === "")) {
       toast.error("Please fill all the fields");
     } else {
       router.push("/shipping/review");

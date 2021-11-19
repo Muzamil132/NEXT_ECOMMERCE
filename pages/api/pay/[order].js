@@ -11,7 +11,7 @@ const handler = nc();
 
 handler.use(auth);
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY);
 
 handler.get(async (req, res) => {
   // console.log(req.query.order);
