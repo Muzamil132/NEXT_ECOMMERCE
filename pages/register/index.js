@@ -3,7 +3,7 @@ import Input from "../../components/Input";
 import { StateContext } from "../../Context/StateContext";
 import CircularProgress from "@mui/material/CircularProgress";
 import Snackbar from "@mui/material/Snackbar";
-import Link from "next/Link";
+import Link from "next/link";
 import { useRouter } from "next/router";
 const Index = () => {
   const router = useRouter();
