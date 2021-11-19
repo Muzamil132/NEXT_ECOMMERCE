@@ -4,7 +4,7 @@ import { StateContext } from "../../Context/StateContext";
 import CircularProgress from "@mui/material/CircularProgress";
 import Snackbar from "@mui/material/Snackbar";
 import { useRouter } from "next/router";
-import Link from "next/Link";
+import Link from "next/link";
 const Register = () => {
   const router = useRouter();
   const { registerUser, state } = useContext(StateContext);
