@@ -41,6 +41,10 @@ handler.post(async (req, res) => {
   //   })
   // );
   res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Acess-Controll-Allow-Methods",
+    "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+  );
   res.status(201).json({
     success: true,
     message: "User created successfully",

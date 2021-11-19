@@ -84,6 +84,7 @@ export const StateProvider = ({ children }) => {
       setState({ ...state, loading: true });
       const res = await fetch(`${NEXT_URL}/api/register`, {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
@@ -117,6 +118,7 @@ export const StateProvider = ({ children }) => {
       setState({ ...state, loading: true });
       const res = await fetch(`${NEXT_URL}/api/login`, {
         method: "POST",
+        mode: "cors",
         headers: {
           "Content-Type": "application/json",
         },
