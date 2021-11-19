@@ -68,7 +68,7 @@ const SingleProduct = ({ product: { product } }) => {
 export default SingleProduct;
 
 export async function getServerSideProps({ query: { id } }) {
-  const NEXT_URL = process.env.URL || "http://localhost:3000";
+  const NEXT_URL = process.env.NEXT_PUBLIC_URL || "http://localhost:3000";
   const res = await fetch(`${NEXT_URL}/api/${id}`);
   const product = await res.json();
   console.log(product);
