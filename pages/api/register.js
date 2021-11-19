@@ -33,13 +33,13 @@ handler.post(async (req, res) => {
   newUser.password = hashedPassword;
   await newUser.save();
   const token = jwt.sign({ id: newUser._id, email: newUser.email }, "880NEXT");
-  res.setHeader(
-    "Set-Cookie",
-    cookie.serialize("token", token, {
-      httpOnly: true,
-      maxAge: 60 * 60 * 24 * 7, // 1 week
-    })
-  );
+  // res.setHeader(
+  //   "Set-Cookie",
+  //   cookie.serialize("token", token, {
+  //     httpOnly: true,
+  //     maxAge: 60 * 60 * 24 * 7, // 1 week
+  //   })
+  // );
 
   res.status(201).json({
     success: true,

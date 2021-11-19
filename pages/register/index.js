@@ -1,16 +1,26 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Input from "../../components/Input";
 import { StateContext } from "../../Context/StateContext";
 import CircularProgress from "@mui/material/CircularProgress";
 import Snackbar from "@mui/material/Snackbar";
 import Link from "next/Link";
+import { useRouter } from "next/router";
 const Index = () => {
+  const router = useRouter();
   const { loginUser, state } = useContext(StateContext);
-  const { error, loading, success } = state;
+  const { error, loading, success, USER } = state;
   const [state1, setState] = useState({
     email: "",
     password: "",
   });
+
+  // REDIRECTING USERS IF LOGGED IN ALREADY TO  HOME PAGE
+
+  useEffect(() => {
+    if (USER != null) {
+      router.push("/");
+    }
+  }, [USER]);
 
   const handleChange = (e) => {
     setState({

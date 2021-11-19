@@ -24,13 +24,13 @@ handler.post(async (req, res) => {
         const token = jwt.sign({ id: user._id, email: user.email }, "880NEXT", {
           expiresIn: "1h",
         });
-        res.setHeader(
-          "Set-Cookie",
-          cookie.serialize("token", token, {
-            httpOnly: true,
-            maxAge: 60 * 60 * 24 * 7, // 1 week
-          })
-        );
+        // res.setHeader(
+        //   "Set-Cookie",
+        //   cookie.serialize("token", token, {
+        //     httpOnly: true,
+        //     maxAge: 60 * 60 * 24 * 7, // 1 week
+        //   })
+        // );
 
         res.status(200).json({
           success: true,

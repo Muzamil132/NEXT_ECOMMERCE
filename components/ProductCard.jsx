@@ -25,7 +25,7 @@ const ProductCard = ({ product }) => {
       lg="4"
     >
       <Card
-        className=" shadow-lg  hover:shadow-2xl bg-gray-50 "
+        className=" shadow-lg  hover:shadow-2xl  "
         elevation={0}
         sx={{ maxWidth: "345px" }}
       >
